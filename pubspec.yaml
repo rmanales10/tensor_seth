@@ -1,0 +1,42 @@
+name: tensor_seth
+description: "Vision AI - TFLite image classifier with sound feedback."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Image picker (gallery + camera)
+  image_picker: ^1.1.2
+
+  # TFLite inference
+  tflite_flutter: ^0.12.1
+
+  # Image processing (resize before inference)
+  image: ^4.2.0
+
+  # Audio playback
+  audioplayers: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/model.tflite
+    - assets/labels.txt
+    - assets/sounds/cat.mp3
+    - assets/sounds/dog.mp3
+    - assets/sounds/human.mp3
+    - assets/sounds/other.mp3
